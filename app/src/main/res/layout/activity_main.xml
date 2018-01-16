@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.igor.sqliteandroid.MainActivity">
+
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/firstname"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtFirstName"
+        android:layout_alignStart="@+id/txtFirstName"
+        android:layout_below="@+id/Firstname"
+        android:layout_marginTop="31dp"
+        android:text="@string/lastname"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Phone"
+        android:layout_alignLeft="@+id/txtLastName"
+        android:layout_alignStart="@+id/txtLastName"
+        android:text="@string/phone"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        tools:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/Firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtFirstName"
+        android:layout_alignBottom="@+id/txtFirstName"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@+id/txtFirstName"
+        android:layout_toRightOf="@+id/txtFirstName"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtLastName"
+        android:layout_alignLeft="@+id/Firstname"
+        android:layout_alignStart="@+id/Firstname"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LastName"
+        android:layout_alignStart="@+id/LastName"
+        android:layout_below="@+id/LastName"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPhone"
+        android:layout_marginTop="119dp"
+        android:layout_toEndOf="@+id/txtPhone"
+        android:layout_toRightOf="@+id/txtPhone"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Phone"
+        android:layout_alignRight="@+id/Phone"
+        android:layout_alignTop="@+id/btnAdd"
+        android:text="Read" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnAdd"
+        android:layout_alignRight="@+id/btnAdd"
+        android:layout_below="@+id/btnAdd"
+        android:layout_marginTop="23dp"
+        android:text="Update" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPhone"
+        android:layout_alignStart="@+id/txtPhone"
+        android:layout_below="@+id/txtPhone"
+        android:layout_marginTop="30dp"
+        android:text="ID"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/Phone"
+        android:layout_alignStart="@+id/Phone"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnUpdate"
+        android:layout_alignEnd="@+id/btnRead"
+        android:layout_alignRight="@+id/btnRead"
+        android:text="Delete" />
+</RelativeLayout>
